@@ -1,6 +1,7 @@
 body {
     background-color: #eaeaea;
     font-family: 'Ubuntu', sans-serif;
+    color: #2d2d2d;
 }
 
 .card-1 {
@@ -15,15 +16,15 @@ body {
 }
 
 .card-header {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     text-transform: uppercase;
     font-size: 23px;
 }
 
 .input-group-text {
-    color: rgb(255, 255, 255);
-    background-color: rgba(102, 182, 86, 0.8);
+    color: #ffffff;
+    background-color: #474747;
 }
 
 /* Menyembunyikan panah input number */

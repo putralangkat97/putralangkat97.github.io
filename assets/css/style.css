@@ -1,0 +1,52 @@
+body {
+    background-color: #eaeaea;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.card-1 {
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-top: 80px; /* Added */
+}
+
+.card-header {
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+.input-group-text {
+    color: rgb(255, 255, 255);
+    background-color: rgba(102, 182, 86, 0.8);
+}
+
+/* Menyembunyikan panah input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+@media only screen and (max-width: 600px) {
+    .card-1 {
+        padding: 10px 10px 10px 10px;
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+    
+    .card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-top: 30px; /* Added */
+    }
+}

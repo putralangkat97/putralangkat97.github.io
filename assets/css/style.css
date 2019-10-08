@@ -12,7 +12,7 @@ body {
 .card {
     margin: 0 auto; /* Added */
     float: none; /* Added */
-    margin-top: 80px; /* Added */
+    margin-top: 50px; /* Added */
 }
 
 .card-header {

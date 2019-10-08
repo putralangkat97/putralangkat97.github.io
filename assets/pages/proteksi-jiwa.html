@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Perhitungan Dana Pendidikan</title>
+    <title>Perhitungan Proteksi Jiwa</title>
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/bootstrap.css">
     <link href="../../assets/css/style.css" rel="stylesheet">
+    <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/format.js" type="text/javascript"></script>
     <script src="../../assets/js/script.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
@@ -15,47 +16,95 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="card card-1 col-md-6">
+            <div class="card card-1 col-md-12">
                 <div class="card-header">
-                    <div class="mb-0">Perhitungan Dana Pendidikan</div>
+                    <div class="mb-0">Perhitungan Proteksi Jiwa</div>
                 </div>
                 <div class="card-body">
                     <form>
                         <div class="row">
                             <div class="col">
-                                <label>Usia Anak</label>
-                                <div class="input-group">
-                                    <input type="number" id="usia" class="form-control" placeholder="0" autocomplete="off" min="1" max="18" oninput="hitungJumlah();hitungBiaya();">
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">Tahun</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <label>Jangka Waktu Simpanan</label>
-                                <div class="input-group">
-                                    <output id="jangka" class="form-control"></output>
-                                    <div class="input-group-append">
-                                        <div class="input-group-text">Tahun</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <label>Biaya Pendidikan Saat Ini</label>
+                                <label>Sisa Saldo KPR</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">Rp.</div>
                                     </div>
-                                    <input type="number" id="biaya" class="form-control" placeholder="0000" autocomplete="off" min="1" max="1000000000" oninput="hitungJumlah();hitungBiaya();">
+                                    <input type="number" id="saldo_kpr" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
                                 </div>
                             </div>
                             <div class="col">
-                                <label>Inflasi Pendidikan</label>
+                                <label>Sisa Saldo KPM</label>
                                 <div class="input-group">
-                                    <input type="number" value="15" class="form-control" id="inflasi"  step=".1" oninput="hitungJumlah();hitungBiaya();">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" id="saldo_kpm" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Sisa Saldo Kartu Kredit</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" id="saldo_kk" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label>Sisa Saldo Kredit Bisnis</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" id="saldo_kb" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Sisa Saldo Kredit Lainnya</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" id="saldo_kl" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label><b>Total Kewajiban</b></label>
+                                <div class="input-group">
+                                    <output class="form-control" id="total">Rp. 0</output>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label>Penghasilan/Tahun</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" id="penghasilan_tahun" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Penghasilan/Bulan</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" id="penghasilan_bulan" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Asumsi Bunga Investasi</label>
+                                <div class="input-group">
+                                    <input type="number" id="asumsi_bunga" value="8" step=".1" class="form-control" oninput="">
                                     <div class="input-group-append">
                                         <div class="input-group-text">%</div>
                                     </div>
@@ -65,31 +114,12 @@
                         <br>
                         <div class="row">
                             <div class="col">
-                                <label>Biaya Pendidikan Nantinya</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <!-- <div class="input-group-text">Rp.</div> -->
-                                    </div>
-                                    <output class="form-control" id="biaya_nanti">Rp. 0</output>
-                                </div>
+                                <label>UP Ideal</label>
+                                <output class="form-control" id="up_ideal">Rp. 0</output>
                             </div>
                             <div class="col">
-                                <label>Asumsi Bunga</label>
-                                <div class="input-group">
-                                    <input type="number" value="20" class="form-control" id="asumsi" step=".1" oninput="hitungJumlah();hitungBiaya();">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">%</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col">
-                                <label>Tabungan Regular Bulanan</label>
-                                <div class="input-group">
-                                    <output id="tabungan_bulanan" class="form-control">Rp. 0</output>
-                                </div>
+                                <label>UP Minimal</label>
+                                <output class="form-control" id="up_minimal">Rp. 0</output>
                             </div>
                         </div>
                         <br>
@@ -115,6 +145,5 @@
         <p>Asumsi Bunga: <input type="number" id="asumsi" value="20" step=".1" onchange="hitungBiaya();">%</p>
         <p>Tabungan Regular Bulanan: <output readonly id="tabungan_bulanan"></output></p>
     </form> -->
-    <script src="../../assets/js/bootstrap.min.js"></script>
 </body>
 </html>

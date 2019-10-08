@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Maintanance</title>
+    <title>Perhitungan Dana Pensiun | PutraLangkat</title>
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/bootstrap.css">
     <link href="../../assets/css/style.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="card card2 card-2 col-md-12">
+            <div class="card card3 card-3 col-md-9">
                 <div class="card-header">
                     <div class="mb-0">Perhitungan Dana Pensiun</div>
                 </div>
@@ -24,7 +24,88 @@
                     <form>
                         <div class="row">
                             <div class="col">
-                                <h1>Lagi Dibuat...</h1>
+                                <label>Dana Pensiun/Bulan</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" id="dana_pensiun" class="form-control" value="0" autocomplete="off" oninput="hitungPensiun();">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Tingkat Bunga</label>
+                                <div class="input-group">
+                                    <input type="number" id="tingkat_bunga" class="form-control" value="6" step=".1" oninput="hitungPensiun();">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label>Jumlah Ideal</label>
+                                <div class="input-group">
+                                    <output class="form-control" id="jumlah_ideal">Rp. 0</output>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Jumlah Yang Ingin Dicapai</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Rp.</div>
+                                    </div>
+                                    <input type="number" class="form-control" id="jumlah_keinginan" oninput="hitungPensiun();" autocomplete="off" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Asumsi Bunga Investasi</label>
+                                <div class="input-group">
+                                    <input type="number" id="asumsi_investasi" class="form-control" value="20" step=".1" onkeyup="">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label>Usia Sekarang</label>
+                                <div class="input-group">
+                                    <input type="number" id="usia_sekarang" class="form-control" placeholder="0" autocomplete="off" oninput="hitungPensiun();">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">Tahun</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Usia Pensiun</label>
+                                <div class="input-group">
+                                    <input type="number" id="usia_pensiun" class="form-control" value="55" min="1" max="55" autocomplete="off" oninput="hitungPensiun();">
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">Tahun</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>Jangka Waktu Simpanan</label>
+                                <div class="input-group">
+                                    <output id="jangka_waktu" class="form-control" value="0">0</output>
+                                    <div class="input-group-append">
+                                        <div class="input-group-text">Tahun</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label>Tabungan Regular Bulanan</label>
+                                <div class="input-group">
+                                    <output id="tabungan_regular" class="form-control">Rp. 0</output>
+                                </div>
                             </div>
                         </div>
                         <br>

@@ -89,7 +89,7 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">Rp.</div>
                                     </div>
-                                    <input type="number" id="penghasilan_tahun" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
+                                    <input type="number" id="penghasilan_tahun" required class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
                                 </div>
                             </div>
                             <div class="col">
@@ -98,13 +98,13 @@
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">Rp.</div>
                                     </div>
-                                    <input type="number" id="penghasilan_bulan" class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
+                                    <input type="number" id="penghasilan_bulan" required class="form-control" value="0" autocomplete="off" oninput="hitungKewajiban();add_commas();">
                                 </div>
                             </div>
                             <div class="col">
                                 <label>Asumsi Bunga Investasi</label>
                                 <div class="input-group">
-                                    <input type="number" id="asumsi_bunga" value="8" step=".1" class="form-control" oninput="">
+                                    <input type="number" id="asumsi_bunga" value="8" step=".1" class="form-control" oninput="hitungKewajiban();">
                                     <div class="input-group-append">
                                         <div class="input-group-text">%</div>
                                     </div>

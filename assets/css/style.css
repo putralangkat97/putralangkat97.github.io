@@ -4,7 +4,6 @@ body {
     color: #2d2d2d;
 }
 
-
 .card-1 {
     padding: 10px 10px 10px 10px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -24,7 +23,7 @@ body {
 .card2 {
     margin: 0 auto; /* Added */
     float: none; /* Added */
-    margin-top: 3px; /* Added */
+    margin-top: 5px; /* Added */
 }
 
 .card-3 {
@@ -35,7 +34,7 @@ body {
 .card3 {
     margin: 0 auto; /* Added */
     float: none; /* Added */
-    margin-top: 40px; /* Added */
+    margin-top: 50px; /* Added */
 }
 
 .card-header {

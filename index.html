@@ -5,80 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PutraLangkat97 | Home</title>
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/bootstrap.css"> -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <!-- JS -->
     <script src="assets/js/format.js" type="text/javascript"></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="light">
+    
+    <button id="theme-toggle" class="btn btn-dark" type="button">Change Theme</button>
 
-    <header>
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">
-            PutraLangkat97
-            </a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="container">
-            <h1 class="text-center">Portofolio</h1>
-            <hr>
-            <div class="row">
-                <div class="col">
-                    <!-- Card Projects -->
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="assets/img/1.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Dana Pendidikan</h5>
-                            <a href="assets/pages/pendidikan.html" class="btn btn-primary">Lihat</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <!-- Card Projects -->
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="assets/img/2.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Proteksi Jiwa</h5>
-                            <a href="assets/pages/proteksi-jiwa.html" class="btn btn-primary">Lihat</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <!-- Card Projects -->
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="assets/img/3.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Dana Pensiun</h5>
-                            <a href="assets/pages/pensiun.html" class="btn btn-primary">Lihat</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Content -->
+    <div class="container" id="box">
+        <div class="row">
+            <h1>Hai, Anggit Ari Utomo here!.</h1>
         </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <span class="text-muted">Copyright 2019. <a href="index.html">PutraLangkat97</a></span>
+        <div class="row">
+            <p>Text me on:</p>
         </div>
-    </footer>
+        <div class="row">
+            <!-- icon social media -->
+            <a href="https://facebook.com/anggit.ariutomo" class="fa fa-facebook" target="_blank" id="facebook"></a>
+            <a href="https://twitter.com/anggitau_" class="fa fa-twitter" target="_blank" id="twitter"></a>
+            <a href="https://github.com/putralangkat97" class="fa fa-github" target="_blank" id="github"></a>
+            <a href="https://t.me/absoluthalal" class="fa fa-instagram" target="_blank" id="instagram"></a>
+            <a href="https://t.me/absoluthalal" class="fa fa-telegram" target="_blank" id="telegram"></a>
+        </div>
+    </div>
 
-    <!-- <form>
-        <legend>Perhitungan Dana Pendidikan</legend>
-        <p>Usia Anak: <input type="number" id="usia" min="1" max="18" onkeyup="hitungJumlah();" onchange="hitungJumlah();"></p>
-        <p>Jangka Waktu Simpanan: <output id="jangka"></output> Tahun</p> -->
-        <!--  -->
-        <!-- <p>Biaya Pendidikan Saat Ini: <input type="number" id="biaya" min="1" max="1000000000" onkeyup="hitungJumlah();hitungBiaya();" onchange="hitungJumlah();hitungBiaya();"></p>
-        <p>Inflasi pendidikan: <input type="number" id="inflasi" value="15" step=".1" onchange="hitungJumlah();">%</p>
-        <p>Biaya Pendidikan Nantinya: <output readonly id="biaya_nanti"></output></p>
-        <p>Asumsi Bunga: <input type="number" id="asumsi" value="20" step=".1" onchange="hitungBiaya();">%</p>
-        <p>Tabungan Regular Bulanan: <output readonly id="tabungan_bulanan"></output></p>
-    </form> -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- script -->
+    <script src="assets/js/bg.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
 </body>
 </html>

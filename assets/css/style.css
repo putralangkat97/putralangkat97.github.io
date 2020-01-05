@@ -1,97 +1,355 @@
+/*--------------------Universal Styles--------------------*/ 
+* {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+a {    
+    transition: var(--link-hover-timing);
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    font-size: 1.15rem;
+    padding: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.btn-light {
+    background: #3d3d3d;
+    color: var(--light-theme-background-color);
+}
+
+.btn-light:hover {
+    background: #fff;
+    color: #3d3d3d;
+}
+
+.btn-dark {
+    background: #fff;
+    color: var(--dark-theme-background-color);
+}
+
+.btn-dark:hover {
+    background: #3d3d3d;
+    color: #fff;
+}
+
+/*--------------------Reusable Variables--------------------*/
+:root {
+    /*--------------------Light Theme Variables (Default)--------------------*/
+    --light-theme-background-color: #fff;
+    --light-theme-darker-background-color: #fff;
+    --light-theme-text-color: #3d3d3d;
+    --light-theme-link-color: #ff6851;
+    --light-theme-link-hover-color: #858585;
+
+    /*--------------------Dark Theme Variables--------------------*/ 
+    --dark-theme-background-color: #3d3d3d;
+    --dark-theme-darker-background-color: #3d3d3d;
+    --dark-theme-text-color: #fff;
+    --dark-theme-link-color: #10df90;
+    --dark-theme-link-hover-color: #858585; 
+
+    /*--------------------Other Variables--------------------*/ 
+    --link-hover-timing: all 0.25s ease-in-out;
+    --theme-change-timing: all 1s ease-in-out;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    font-family: 'Ubuntu';
+}
+
+/*--------------------Light Theme Styles (Default)--------------------*/
+.light {
+    background: var(--light-theme-background-color);
+    color: var(--light-theme-text-color);
+    transition: var(--theme-change-timing);
+}
+
+.light a {
+    color: var(--light-theme-link-color);
+}
+
+.light a:hover {
+    color: var(--light-theme-link-hover-color);
+}
+
+/*--------------------Dark Theme Styles--------------------*/
+.dark {
+    background: var(--dark-theme-background-color);
+    color: var(--dark-theme-text-color);
+    transition: var(--theme-change-timing);
+}
+
+.dark a {
+    color: var(--dark-theme-link-color);
+}
+
+.dark a:hover {
+    color: var(--dark-theme-link-hover-color);
+}
+/* Content */
+
+#kiri {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 2px;
+    color: rgb(243, 91, 74);
+}
+
+#tengah {
+    margin-right: 2px;
+    color: rgb(255, 187, 0);
+}
+
+#kanan {
+    margin-right: 2px;
+    color: rgb(6, 223, 6);
+}
+
+.navbar {
     background-color: #ffffff;
-    font-family: 'Ubuntu', sans-serif;
-    color: #2d2d2d;
 }
 
-.card-1 {
-    padding: 10px 10px 10px 10px;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-}
-
-.card-2 {
-    padding: 10px 10px 10px 10px;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-}
-
-.card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-top: 50px; /* Added */
-}
-
-.card2 {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-top: 5px; /* Added */
-}
-
-.card-3 {
-    padding: 10px 10px 10px 10px;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-}
-
-.card3 {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-top: 50px; /* Added */
-}
-
-.card-header {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
+#box h1 {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    font-weight: 800;
+    width: 16em;
     text-transform: uppercase;
-    font-size: 23px;
 }
 
-.input-group-text {
-    color: #ffffff;
-    background-color: #585757;
+#box p {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    font-weight: lighter;
+    width: 5.3em;
 }
 
-/* Menyembunyikan panah input number */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+#box a {
+    text-decoration: none;
 }
 
-input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+#box #facebook {
+    position: absolute;
+    left: 42%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 800;
+    width: 1em;
+  transition: 0.3s;
 }
 
-@media only screen and (max-width: 600px) {
-    .card-1 {
-        padding: 10px 10px 10px 10px;
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+#box #twitter {
+    position: absolute;
+    left: 46%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 800;
+    width: 1em;
+  transition: 0.3s;
+}
+
+#box #github {
+    position: absolute;
+    left: 50%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 800;
+    width: 1em;
+  transition: 0.3s;
+}
+
+#box #instagram {
+    position: absolute;
+    left: 54%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 800;
+    width: 1em;
+  transition: 0.3s;
+}
+
+#box #telegram {
+    position: absolute;
+    left: 58%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 800;
+    width: 1em;
+  transition: 0.3s;
+}
+/* 
+#box #facebook:hover {
+    color: rgb(83, 83, 209);
+}
+
+#box #twitter:hover {
+    color: lightskyblue;
+}
+
+#box #github:hover {
+    color: rgb(255, 205, 111);
+}
+
+#box #instagram:hover {
+    color: rgb(253, 165, 179);
+}
+
+#box #telegram:hover {
+    color: skyblue;
+} */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 700px) {
+    #box h1{
+        position: absolute;
+        left: 50%;
+        top: 42%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    #box p {
+        position: absolute;
+        left: 50%;
+        top: 53%;
+        transform: translate(-50%, -50%);
+        font-size: 15px;
+        font-weight: lighter;
+        width: 5.2em;
+    }
+
+    #box #facebook {
+        position: absolute;
+        left: 40%;
+        top: 62%;
+        transform: translate(-50%, -50%);
+        font-size: 23px;
+        font-weight: 800;
+        width: 1em;
+      transition: 0.3s;
     }
     
-    .card {
-        margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-top: 30px; /* Added */
+    #box #twitter {
+        position: absolute;
+        left: 45%;
+        top: 62%;
+        transform: translate(-50%, -50%);
+        font-size: 23px;
+        font-weight: 800;
+        width: 1em;
+      transition: 0.3s;
     }
-
-    .card-2 {
-        padding: 10px 10px 10px 10px;
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    
+    #box #github {
+        position: absolute;
+        left: 50%;
+        top: 62%;
+        transform: translate(-50%, -50%);
+        font-size: 23px;
+        font-weight: 800;
+        width: 1em;
+      transition: 0.3s;
     }
-
-    .card2 {
-        margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-top: 3px; /* Added */
+    
+    #box #instagram {
+        position: absolute;
+        left: 55%;
+        top: 62%;
+        transform: translate(-50%, -50%);
+        font-size: 23px;
+        font-weight: 800;
+        width: 1em;
+      transition: 0.3s;
     }
-
-    .card-3 {
-        padding: 10px 10px 10px 10px;
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    }
-
-    .card3 {
-        margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-top: 3px; /* Added */
+    
+    #box #telegram {
+        position: absolute;
+        left: 60%;
+        top: 62%;
+        transform: translate(-50%, -50%);
+        font-size: 23px;
+        font-weight: 800;
+        width: 1em;
+      transition: 0.3s;
     }
 }

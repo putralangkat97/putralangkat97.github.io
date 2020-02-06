@@ -19,13 +19,14 @@
             <h1 class="text-success">Latihan API</h1>
         </div>
         <div class="row">
-            <a href="comment.html" class="btn btn-success">Comments</a>
+            <a href="index.html" class="btn btn-warning">Posts</a>
             <table class="table table-hover table-bordered" id="tbl">
                 <thead class="text-center">
                     <tr>
-                        <th>UserID</th>
+                        <th>PostID</th>
                         <th>ID</th>
-                        <th>Title</th>
+                        <th>Name</th>
+                        <th>Email</th>
                         <th>Body</th>
                     </tr>
                 </thead>
@@ -36,12 +37,12 @@
         </div>
     </div>
     <script>
-        $.getJSON('http://jsonplaceholder.typicode.com/posts', function(data){
+        $.getJSON('http://jsonplaceholder.typicode.com/posts/1/comments', function(data){
             console.log(data);
             bodyData = '';
             $.each(data, function(index, data){
                 bodyData += '<tr>';
-                bodyData += '<td>'+data.userId+'</td><td>'+data.id+'</td><td>'+data.title+'</td><td>'+data.body+'</td>';
+                bodyData += '<td>'+data.postId+'</td><td>'+data.id+'</td><td>'+data.name+'</td><td>'+data.email+'</td><td>'+data.body+'</td>';
                 bodyData += '</tr>';
             });
             $('#bD').append(bodyData);
